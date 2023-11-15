@@ -1,49 +1,176 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TestWebApplication1</title>
+    <title>@ViewData["Title"] - System Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TestWebApplication1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TestWebApplication1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+    @* <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+    <span class="zenith">ZENITH</span>
+    <span class="comp">COMP</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    </header> *@
+
+<div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header pb-2">
+                <h3>
+                    <span style="color: #EA6B03; font-size: 40px;">ZENITH</span>
+                    <span style="color: #2D4E9E; font-size: 40px;">COMP</span> 
+                </h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                @* <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </li> *@
+                <li class="active">
+                    <span class="svg-icon svg-active">
+                    <svg width="20" height="20" viewBox="0 0 42 42" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 28.875C3 28.1788 3.27656 27.5111 3.76884 27.0188C4.26113 26.5266 4.92881 26.25 5.625 26.25H10.875C11.5712 26.25 12.2389 26.5266 12.7312 27.0188C13.2234 27.5111 13.5 28.1788 13.5 28.875V36.75C13.5 37.4462 13.2234 38.1139 12.7312 38.6062C12.2389 39.0984 11.5712 39.375 10.875 39.375H5.625C4.92881 39.375 4.26113 39.0984 3.76884 38.6062C3.27656 38.1139 3 37.4462 3 36.75V28.875ZM16.125 18.375C16.125 17.6788 16.4016 17.0111 16.8938 16.5188C17.3861 16.0266 18.0538 15.75 18.75 15.75H24C24.6962 15.75 25.3639 16.0266 25.8562 16.5188C26.3484 17.0111 26.625 17.6788 26.625 18.375V36.75C26.625 37.4462 26.3484 38.1139 25.8562 38.6062C25.3639 39.0984 24.6962 39.375 24 39.375H18.75C18.0538 39.375 17.3861 39.0984 16.8938 38.6062C16.4016 38.1139 16.125 37.4462 16.125 36.75V18.375ZM29.25 5.25C29.25 4.55381 29.5266 3.88613 30.0188 3.39384C30.5111 2.90156 31.1788 2.625 31.875 2.625H37.125C37.8212 2.625 38.4889 2.90156 38.9812 3.39384C39.4734 3.88613 39.75 4.55381 39.75 5.25V36.75C39.75 37.4462 39.4734 38.1139 38.9812 38.6062C38.4889 39.0984 37.8212 39.375 37.125 39.375H31.875C31.1788 39.375 30.5111 39.0984 30.0188 38.6062C29.5266 38.1139 29.25 37.4462 29.25 36.75V5.25Z" fill="black"/>
+                    </svg>
+                    </span>
+                    <a asp-controller="Home" asp-action="Index">Dashboard</a>
+                </li>
+                <li>
+                    <span class="svg-icon">
+                        <svg width="20" height="20" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8_1302)">
+                            <path d="M3.16667 38C3.16667 38 0 38 0 34.8333C0 31.6667 3.16667 22.1667 19 22.1667C34.8333 22.1667 38 31.6667 38 34.8333C38 38 34.8333 38 34.8333 38H3.16667ZM19 19C21.5196 19 23.9359 17.9991 25.7175 16.2175C27.4991 14.4359 28.5 12.0196 28.5 9.5C28.5 6.98044 27.4991 4.56408 25.7175 2.78249C23.9359 1.00089 21.5196 0 19 0C16.4804 0 14.0641 1.00089 12.2825 2.78249C10.5009 4.56408 9.5 6.98044 9.5 9.5C9.5 12.0196 10.5009 14.4359 12.2825 16.2175C14.0641 17.9991 16.4804 19 19 19Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_8_1302">
+                            <rect width="38" height="38"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                    <a asp-controller="Home" asp-action="ManageUser">Manage User</a>
+                </li>
+                <li>
+                    <span class="svg-icon">
+                        <svg width="20" height="20" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8_1307)">
+                            <path d="M24.4286 8.14286C24.4286 10.3025 23.5707 12.3736 22.0436 13.9007C20.5165 15.4278 18.4453 16.2857 16.2857 16.2857C14.1261 16.2857 12.0549 15.4278 10.5278 13.9007C9.00076 12.3736 8.14286 10.3025 8.14286 8.14286C8.14286 5.98324 9.00076 3.91207 10.5278 2.38499C12.0549 0.857906 14.1261 0 16.2857 0C18.4453 0 20.5165 0.857906 22.0436 2.38499C23.5707 3.91207 24.4286 5.98324 24.4286 8.14286ZM0 29.8571C0 32.5714 2.71429 32.5714 2.71429 32.5714H16.9806C16.5191 31.2637 16.2842 29.8868 16.2857 28.5C16.2839 26.7543 16.6572 25.0286 17.3802 23.4397C18.1032 21.8508 19.1592 20.4358 20.4766 19.2904C19.209 19.1031 17.8166 19 16.2857 19C2.71429 19 0 27.1429 0 29.8571ZM26.8334 20.2486C27.322 18.5847 29.678 18.5847 30.1693 20.2486L30.286 20.6503C30.3589 20.8995 30.4867 21.1291 30.6601 21.3224C30.8334 21.5157 31.0479 21.6677 31.2877 21.7671C31.5275 21.8666 31.7866 21.911 32.0459 21.8972C32.3051 21.8834 32.558 21.8116 32.7859 21.6871L33.155 21.4863C34.6777 20.6557 36.3443 22.3223 35.5164 23.845L35.3129 24.2141C35.1889 24.4419 35.1176 24.6945 35.104 24.9535C35.0904 25.2124 35.135 25.4711 35.2344 25.7105C35.3338 25.95 35.4856 26.1642 35.6786 26.3374C35.8716 26.5105 36.1009 26.6383 36.3497 26.7113L36.7541 26.8334C38.4153 27.322 38.4153 29.678 36.7541 30.1693L36.347 30.286C36.0983 30.3595 35.8692 30.4878 35.6765 30.6614C35.4839 30.835 35.3325 31.0496 35.2336 31.2893C35.1347 31.5291 35.0907 31.7879 35.1049 32.0469C35.1191 32.3059 35.1911 32.5583 35.3156 32.7859L35.5164 33.155C36.3443 34.6777 34.6777 36.3443 33.155 35.5164L32.7859 35.3129C32.5581 35.1889 32.3055 35.1176 32.0465 35.104C31.7876 35.0904 31.5289 35.135 31.2895 35.2344C31.05 35.3338 30.8358 35.4856 30.6626 35.6786C30.4895 35.8716 30.3617 36.1009 30.2887 36.3497L30.1666 36.7541C29.678 38.4153 27.322 38.4153 26.8307 36.7541L26.714 36.347C26.6405 36.0983 26.5122 35.8692 26.3386 35.6765C26.165 35.4839 25.9504 35.3325 25.7107 35.2336C25.4709 35.1347 25.2121 35.0907 24.9531 35.1049C24.6941 35.1191 24.4416 35.1911 24.2141 35.3156L23.845 35.5164C22.3223 36.3443 20.6557 34.6777 21.4836 33.155L21.6871 32.7859C21.8111 32.5581 21.8824 32.3055 21.896 32.0465C21.9096 31.7876 21.865 31.5289 21.7656 31.2895C21.6662 31.05 21.5144 30.8358 21.3214 30.6626C21.1284 30.4895 20.8991 30.3617 20.6503 30.2887L20.2486 30.1666C18.5847 29.678 18.5847 27.322 20.2486 26.8307L20.6503 26.714C20.8995 26.6411 21.1291 26.5133 21.3224 26.3399C21.5157 26.1666 21.6677 25.9521 21.7671 25.7123C21.8666 25.4725 21.911 25.2134 21.8972 24.9541C21.8834 24.6949 21.8116 24.442 21.6871 24.2141L21.4863 23.845C20.6557 22.3223 22.3223 20.6557 23.845 21.4836L24.2141 21.6871C24.4419 21.8111 24.6945 21.8824 24.9535 21.896C25.2124 21.9096 25.4711 21.865 25.7105 21.7656C25.95 21.6662 26.1642 21.5144 26.3374 21.3214C26.5105 21.1284 26.6383 20.8991 26.7113 20.6503L26.8334 20.2486ZM32.5714 28.5C32.5714 27.9653 32.4661 27.4359 32.2615 26.9419C32.0569 26.448 31.757 25.9991 31.3789 25.6211C31.0009 25.243 30.552 24.9431 30.0581 24.7385C29.5641 24.5339 29.0347 24.4286 28.5 24.4286C27.9653 24.4286 27.4359 24.5339 26.9419 24.7385C26.448 24.9431 25.9991 25.243 25.6211 25.6211C25.243 25.9991 24.9431 26.448 24.7385 26.9419C24.5339 27.4359 24.4286 27.9653 24.4286 28.5C24.4286 29.5798 24.8575 30.6154 25.6211 31.3789C26.3846 32.1425 27.4202 32.5714 28.5 32.5714C29.5798 32.5714 30.6154 32.1425 31.3789 31.3789C32.1425 30.6154 32.5714 29.5798 32.5714 28.5Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_8_1307">
+                            <rect width="38" height="38" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </span>    
+                    <a asp-controller="Home" asp-action="Privacy">Manage Role</a>
+                </li>
+                <li>
+                    <span class="svg-icon">
+                        <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_9_1321)">
+                            <path d="M25 1.25C25 0.918479 24.8683 0.600537 24.6339 0.366117C24.3995 0.131696 24.0815 0 23.75 0L16.25 0C15.9185 0 15.6005 0.131696 15.3661 0.366117C15.1317 0.600537 15 0.918479 15 1.25C15 1.58152 14.8683 1.89946 14.6339 2.13388C14.3995 2.3683 14.0815 2.5 13.75 2.5C13.4185 2.5 13.1005 2.6317 12.8661 2.86612C12.6317 3.10054 12.5 3.41848 12.5 3.75V5C12.5 5.33152 12.6317 5.64946 12.8661 5.88388C13.1005 6.1183 13.4185 6.25 13.75 6.25H26.25C26.5815 6.25 26.8995 6.1183 27.1339 5.88388C27.3683 5.64946 27.5 5.33152 27.5 5V3.75C27.5 3.41848 27.3683 3.10054 27.1339 2.86612C26.8995 2.6317 26.5815 2.5 26.25 2.5C25.9185 2.5 25.6005 2.3683 25.3661 2.13388C25.1317 1.89946 25 1.58152 25 1.25Z" fill="black"/>
+                            <path d="M10.2125 2.5H8.75C7.75544 2.5 6.80161 2.89509 6.09835 3.59835C5.39509 4.30161 5 5.25544 5 6.25V36.25C5 37.2446 5.39509 38.1984 6.09835 38.9016C6.80161 39.6049 7.75544 40 8.75 40H31.25C32.2446 40 33.1984 39.6049 33.9017 38.9016C34.6049 38.1984 35 37.2446 35 36.25V6.25C35 5.25544 34.6049 4.30161 33.9017 3.59835C33.1984 2.89509 32.2446 2.5 31.25 2.5H29.7875C29.925 2.89 30 3.3125 30 3.75V5C30 5.99456 29.6049 6.94839 28.9017 7.65165C28.1984 8.35491 27.2446 8.75 26.25 8.75H13.75C12.7554 8.75 11.8016 8.35491 11.0983 7.65165C10.3951 6.94839 10 5.99456 10 5V3.75C10 3.3125 10.075 2.89 10.2125 2.5ZM15 20H25C25.3315 20 25.6495 20.1317 25.8839 20.3661C26.1183 20.6005 26.25 20.9185 26.25 21.25C26.25 21.5815 26.1183 21.8995 25.8839 22.1339C25.6495 22.3683 25.3315 22.5 25 22.5H15C14.6685 22.5 14.3505 22.3683 14.1161 22.1339C13.8817 21.8995 13.75 21.5815 13.75 21.25C13.75 20.9185 13.8817 20.6005 14.1161 20.3661C14.3505 20.1317 14.6685 20 15 20Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_9_1321">
+                            <rect width="40" height="40" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </span>    
+                    <a asp-controller="Home" asp-action="Index">Activity Logging</a>
+                </li>
+            </ul>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid p-0">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <button type="button" id="sidebarCollapse" class="btn btn-outline-primary">
+                                <img src="~/svg/menu.svg" height="20" width="20">
+                                <span class="pl-2">Toggle Sidebar</span>
+                            </button>
+                            <button class="btn btn-primary d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <img src="~/svg/menu.svg" height="20" width="20">
+                            </button>
+                        </div>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+             <div class="content">
+                @RenderBody()
+            </div>
+
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2566 - TestWebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+                   
+            @* <footer class="border-top footer text-muted">
+                <div class="container">
+                &copy; 2566 - TestWebApplication1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+                </footer> *@
+
+    
+    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
