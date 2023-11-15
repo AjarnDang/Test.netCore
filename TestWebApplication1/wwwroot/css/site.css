@@ -1,26 +1,21 @@
 @font-face {
-  font-family: 'IBM';
-  src: url('/font/IBMPlexSansThai-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'IBM';
-  src: url('/font/IBMPlexSansThai-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
   font-family: 'Poppins';
   src: url('/font/Poppins-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Poppins-SemiBold';
   src: url('/font/Poppins-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/font/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-family: 'Inter-Regular';
+  src: url('/font/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('/font/Inter-Medium.ttf') format('truetype');
 }
 
 :root {
@@ -55,11 +50,12 @@
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: 'Inter-Regular';
 }
 
 html {
   font-size: 14px;
+  font-weight: 200;
 }
 
 @media (min-width: 768px) {
@@ -86,8 +82,29 @@ span.comp {
 } */
 
 .btn-outline-primary {
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins-SemiBold';
+  border-radius: 6px;
+  padding: 8px 35px;
   border: 1px solid #EA6B03;
+  background: transparent;
   color: #EA6B03;
+}
+
+.btn-outline-secondary {
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins-SemiBold';
+  border-radius: 6px;
+  padding: 8px 35px;
+  border: 1px solid #CDCDCD;
+  background: transparent;
+  color: #000;
 }
 
 .btn-outline-primary:hover {
@@ -96,10 +113,36 @@ span.comp {
   border: none;
 }
 
+.btn-outline-primary svg:hover {
+  fill: #fff;
+}
+
 .btn-primary {
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Poppins-SemiBold';
+  border-radius: 6px;
+  padding: 8px 35px;
   background-color: #EA6B03;
   color: #ffffff;
   border: none;
+}
+
+.btn-primary svg,
+.btn-outline-primary svg {
+  width: 30px;
+  height: 30px;
+  padding-right: 5px;
+}
+
+.btn-primary svg path {
+  fill: #fff;
+}
+
+.btn-outline-primary svg path {
+  fill: #EA6B03;
 }
 
 .btn-primary:hover {
@@ -107,6 +150,70 @@ span.comp {
   color: #ffffff;
   border: none;
 }
+
+.form-search {
+  padding: 11px 12px;
+}
+
+.content-hr-divider {
+  margin: 20px 0;
+}
+
+.breadcrumb .breadcrumb-item {
+  font-family: "Inter-Medium";
+}
+
+
+
+
+
+.page-title, th, thead {
+  font-family: 'Poppins-SemiBold';
+}
+
+.role-card {
+  border: none;
+  border-radius: 30px;
+  padding: 8px 10px;
+  font-weight:lighter;
+  pointer-events: none; 
+}
+
+.role-superadmin {
+  background-color: #EA6B03;
+  color: #fff;
+}
+
+.role-admin {
+  background-color: #2D4E9E;
+  color: #fff;
+}
+
+.role-operator {
+  background-color: #86E077;
+  color: #000000;
+}
+
+.role-editor {
+  background-color: #5F5F5F;
+  color: #fff;
+}
+
+.edit-data svg {
+margin-right: 13px;
+}
+
+.edit-data svg,
+.delete-data svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+
+
+
 
 a,
 a:hover,
@@ -118,6 +225,7 @@ a:focus {
 
 .navbar {
   background-color: white;
+  padding: 24px 29px;
   border: none;
   border-radius: 0;
   /* margin-bottom: 40px; */
@@ -137,6 +245,10 @@ a:focus {
   margin: 40px 0;
 }
 
+.navbar .dropdown {
+  float: right !important;
+}
+
 /* ---------------------------------------------------
   SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -154,7 +266,7 @@ a:focus {
   color: #000000;
   transition: all 0.3s;
   padding: 20px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 }
 
 #sidebar.active {
@@ -194,16 +306,16 @@ a:focus {
   border-radius: 6px;
 }
 
+#sidebar ul li .svg-icon.active svg path {
+  fill: #fff;
+}
+
 #sidebar ul li.active:hover {
   color: #fff;
 }
 
-#sidebar ul li .svg-icon {
+#sidebar ul li .svg-icon svg {
   margin-right: 10px;
-}
-
-#sidebar ul li .svg-active svg path {
-  fill: #fff;
 }
 
 a[data-toggle="collapse"] {
@@ -252,10 +364,15 @@ a.article:hover {
 ----------------------------------------------------- */
 
 #content {
-  padding: 10px 15px;
+  background-color: #E5E9F2;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
   transition: all 0.3s;
+}
+
+.content {
+  padding: 20px;
 }
 
 /* ---------------------------------------------------
@@ -264,7 +381,7 @@ a.article:hover {
 
 @media (max-width: 768px) {
   #sidebar {
-      margin-left: -250px;
+      margin-left: -310px;
   }
   #sidebar.active {
       margin-left: 0;
@@ -272,4 +389,123 @@ a.article:hover {
   #sidebarCollapse span {
       display: none;
   }
+}
+
+
+
+
+
+.s006 form {
+  width: 100%;
+  max-width: 790px;
+}
+
+.s006 form .inner-form .input-field {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.s006 form .inner-form .input-field input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #D9D9D9;
+  background: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px 32px 10px 70px;
+  font-size: 18px;
+  color: #666;
+  border-radius: 6px;
+}
+
+.s006 form .inner-form .input-field input.placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.s006 form .inner-form .input-field input:-moz-placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.s006 form .inner-form .input-field input::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.s006 form .inner-form .input-field input:hover, .s006 form .inner-form .input-field input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+
+.s006 form .inner-form .input-field .btn-search {
+  width: 70px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  align-items: center;
+}
+
+.s006 form .inner-form .input-field .btn-search svg {
+  fill: #ccc;
+  width: 30px;
+  height: 30px;
+  transition: all .2s ease-out, color .2s ease-out;
+}
+
+.s006 form .inner-form .input-field .btn-search:hover, .s006 form .inner-form .input-field .btn-search:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.s006 form .inner-form .input-field .btn-search:hover svg, .s006 form .inner-form .input-field .btn-search:focus svg {
+  fill: #666;
+}
+
+
+@media screen and (max-width: 767px) {
+  .s006 form .inner-form .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .s006 form .inner-form .input-field input {
+    padding-left: 55px;
+    font-size: 16px;
+  }
+  .s006 form .inner-form .input-field .btn-search svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
+
+
+
+.pagination .page-item.active .page-link {
+  background-color: #EA6B03;
+  border: 1px solid #CDCDCD;
+  color: #fff;
+}
+
+.pagination .page-item a.page-link {
+  color: #000;
+}
+
+.pagination .page-item .page-link svg {
+  width: 16px;
+  height: 16px;
 }

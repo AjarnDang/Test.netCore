@@ -2,7 +2,7 @@
 
 namespace TestWebApplication1.Controllers
 {
-    public class ManageUserController : Controller
+    public class ManageRoleController : Controller
     {
         public IActionResult Index()
         {
