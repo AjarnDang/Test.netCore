@@ -26,12 +26,12 @@
   --red: #e74a3b;
   --orange: #EA6B03;
   --yellow: #f6c23e;
-  --green: #1cc88a;
+  --green: #86E077;
   --teal: #20c9a6;
   --cyan: #36b9cc;
   --white: #fff;
   --gray: #858796;
-  --gray-dark: #5a5c69;
+  --gray-dark: #5F5F5F;
   --primary: #2D4E9E;
   --secondary: #858796;
   --success: #1cc88a;
@@ -151,6 +151,29 @@ span.comp {
   border: none;
 }
 
+.nav-pills .nav-link.active svg {
+  margin-right: 10px;
+}
+
+.nav-pills .nav-link, 
+.nav-pills .show>.nav-link {
+  color: #000;
+}
+
+.nav-pills .nav-link.active, 
+.nav-pills .show>.nav-link {
+  background-color: #EA6B03;
+}
+
+.nav-pills .nav-link.active svg path {
+  fill: #fff;
+}
+
+.form-check-input:checked {
+  background-color: #EA6B03;
+  border: 1px solid #EA6B03;
+}
+
 .form-search {
   padding: 11px 12px;
 }
@@ -159,9 +182,12 @@ span.comp {
   margin: 20px 0;
 }
 
-.breadcrumb .breadcrumb-item {
+.breadcrumb .breadcrumb-item,
+label {
   font-family: "Inter-Medium";
 }
+
+
 
 
 
@@ -180,29 +206,33 @@ span.comp {
 }
 
 .role-superadmin {
-  background-color: #EA6B03;
+  background-color: var(--orange);
   color: #fff;
 }
 
 .role-admin {
-  background-color: #2D4E9E;
+  background-color: var(--blue);
   color: #fff;
 }
 
 .role-operator {
-  background-color: #86E077;
+  background-color: var(--green);
   color: #000000;
 }
 
 .role-editor {
-  background-color: #5F5F5F;
+  background-color: var(--gray);
   color: #fff;
 }
 
+.view-data svg,
+.restore-data svg,
 .edit-data svg {
 margin-right: 13px;
 }
 
+.view-data svg,
+.restore-data svg,
 .edit-data svg,
 .delete-data svg {
   width: 24px;
@@ -296,17 +326,13 @@ a:focus {
   font-size: 1.1em;
 }
 
-#sidebar ul li a:hover {
-  color: #EA6B03;
-}
-
 #sidebar ul li.active {
   color: #fff;
   background: #EA6B03; 
   border-radius: 6px;
 }
 
-#sidebar ul li .svg-icon.active svg path {
+#sidebar ul li.active .svg-icon svg path {
   fill: #fff;
 }
 
@@ -379,9 +405,24 @@ a.article:hover {
   MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+/* Nest Hub*/
+@media (max-width: 1199px) {
+   
+}
+
+
+/* Surface Pro 7*/
+@media (max-width: 991px) {
+  table {
+    min-width: 1000px;
+  }
+}
+
+
+/* iPad Mini*/
+@media (max-width: 769px) {
   #sidebar {
-      margin-left: -310px;
+    margin-left: -310px;
   }
   #sidebar.active {
       margin-left: 0;
@@ -392,12 +433,54 @@ a.article:hover {
 }
 
 
+/* Samsung Galaxy S8+  Horizontal*/
+
+@media (max-width: 767px) {
+    
+}
+
+
+/* Surface Duo*/
+@media (max-width: 569px) {
+
+}
+
+
+/*iPhone XR*/
+@media (max-width: 481px) {
+   
+}
+
+
+/*Galaxy S20 Ultra*/
+@media (max-width: 414px) {
+   
+}
+
+
+/*iPhone SE*/
+@media (max-width: 376px) {
+  
+    
+}
+
+
+/* Galaxy Fold*/
+@media (max-width: 321px) {
+   
+}
+
 
 
 
 .s006 form {
   width: 100%;
-  max-width: 790px;
+  max-width: 100%;
+}
+
+.s006 form .inner-form .form-date {
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .s006 form .inner-form .input-field {
@@ -414,7 +497,7 @@ a.article:hover {
   background: #fff;
   display: block;
   width: 100%;
-  padding: 10px 32px 10px 70px;
+  padding: 12px 32px 11px 70px;
   font-size: 18px;
   color: #666;
   border-radius: 6px;
@@ -441,7 +524,7 @@ a.article:hover {
 }
 
 .s006 form .inner-form .input-field .btn-search {
-  width: 70px;
+  width: 50px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -478,7 +561,7 @@ a.article:hover {
 
 @media screen and (max-width: 767px) {
   .s006 form .inner-form .input-field {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     height: 50px;
   }
   .s006 form .inner-form .input-field input {

@@ -1,0 +1,320 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Settings";
+    ViewData["Nav"] = "nav-setting";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a sp-controller="Home" asp-action="Index">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+            @ViewData["Title"]
+        </li>
+    </ol>
+</nav>
+<div class="card border-0 p-4">
+    <div class="row d-flex align-items-center">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 h3 align-item-center page-title">
+            @ViewData["Title"]
+        </div>
+    </div>
+
+    <hr class="content-hr-divider">
+
+    <div class="row">
+        <div class="col-md-2 mb-3">
+            <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">
+                        <svg width="18" height="18" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_8_1302)">
+                                <path
+                                    d="M3.16667 38C3.16667 38 0 38 0 34.8333C0 31.6667 3.16667 22.1667 19 22.1667C34.8333 22.1667 38 31.6667 38 34.8333C38 38 34.8333 38 34.8333 38H3.16667ZM19 19C21.5196 19 23.9359 17.9991 25.7175 16.2175C27.4991 14.4359 28.5 12.0196 28.5 9.5C28.5 6.98044 27.4991 4.56408 25.7175 2.78249C23.9359 1.00089 21.5196 0 19 0C16.4804 0 14.0641 1.00089 12.2825 2.78249C10.5009 4.56408 9.5 6.98044 9.5 9.5C9.5 12.0196 10.5009 14.4359 12.2825 16.2175C14.0641 17.9991 16.4804 19 19 19Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_8_1302">
+                                    <rect width="38" height="38" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Roles & Accesses</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-10">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <form action="">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="">Frist name</label>
+                                <input type="text" class="form-control" placeholder="John">
+                            </div>
+                            <div class="col">
+                                <label for="">Sure name</label>
+                                <input type="text" class="form-control" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="">Username</label>
+                                <input type="text" class="form-control" placeholder="johndoe123">
+                            </div>
+                            <div class="col">
+                                <label for="">Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="">Phone</label>
+                                <input type="text" class="form-control" placeholder="08123XXXXX" maxlength="10"
+                                    minlength="10">
+                            </div>
+                            <div class="col">
+                                <label for="">Email</label>
+                                <input type="email" class="form-control" placeholder="johndoe@gmail.com">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="">Team</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Developer 01</option>
+                                    <option>Developer 02</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="">Position</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Frontend Developer</option>
+                                    <option>Backend Developer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="">Language</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>English</option>
+                                    <option>ไทย</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="">Theme</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Light</option>
+                                    <option>Dark</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-flex my-4">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-outline-primary mx-2">Cancel</button>
+                        </div>
+                        <a href="" class="text-danger">Terminate account</a>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <form action="">
+                        <div class="row mb-4">
+                            <div class="col-3">
+                                <label class="d-block mb-2" for="">Roles</label>
+                                <span class="role-card role-admin">Admin</span>
+                                <span class="role-card role-operator">Operator</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">
+                                <label class="d-block" for="">Accesses</label>
+                                <table class="table table-borderless table-responsive">
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        All page
+                                                    </label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Dashboard
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <svg width="20" height="20" viewBox="0 0 35 35" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_24_396)">
+                                                            <path
+                                                                d="M34.6578 3.37771C34.877 3.59749 35 3.89516 35 4.20549C35 4.51582 34.877 4.8135 34.6578 5.03328L32.2117 7.48145L27.5211 2.79146L29.9672 0.343291C30.1871 0.123482 30.4854 0 30.7963 0C31.1072 0 31.4055 0.123482 31.6254 0.343291L34.6578 3.37537V3.37771ZM30.5536 9.13701L25.863 4.44703L9.88449 20.4258C9.75541 20.5548 9.65824 20.7122 9.60071 20.8854L7.71274 26.5462C7.67851 26.6494 7.67364 26.7601 7.6987 26.8659C7.72376 26.9717 7.77776 27.0685 7.85465 27.1454C7.93155 27.2222 8.02831 27.2762 8.13413 27.3013C8.23994 27.3263 8.35064 27.3215 8.45386 27.2873L14.1154 25.3995C14.2884 25.3427 14.4458 25.2464 14.5751 25.1181L30.5536 9.13701Z"
+                                                                fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.853653 30.5793C0.853653 31.5253 1.22947 32.4326 1.89842 33.1016C2.56738 33.7705 3.47468 34.1463 4.42073 34.1463H30.5793C31.5253 34.1463 32.4326 33.7705 33.1016 33.1016C33.7705 32.4326 34.1463 31.5253 34.1463 30.5793V16.311C34.1463 15.9956 34.0211 15.6932 33.7981 15.4702C33.5751 15.2472 33.2727 15.122 32.9573 15.122C32.642 15.122 32.3395 15.2472 32.1165 15.4702C31.8936 15.6932 31.7683 15.9956 31.7683 16.311V30.5793C31.7683 30.8946 31.643 31.1971 31.42 31.42C31.197 31.643 30.8946 31.7683 30.5793 31.7683H4.42073C4.10538 31.7683 3.80294 31.643 3.57996 31.42C3.35697 31.1971 3.2317 30.8946 3.2317 30.5793V4.42073C3.2317 4.10538 3.35697 3.80295 3.57996 3.57997C3.80294 3.35698 4.10538 3.23171 4.42073 3.23171H19.878C20.1934 3.23171 20.4958 3.10644 20.7188 2.88345C20.9418 2.66047 21.0671 2.35803 21.0671 2.04268C21.0671 1.72734 20.9418 1.4249 20.7188 1.20192C20.4958 0.978932 20.1934 0.853661 19.878 0.853661H4.42073C3.47468 0.853661 2.56738 1.22948 1.89842 1.89843C1.22947 2.56739 0.853653 3.47469 0.853653 4.42073V30.5793Z"
+                                                                fill="black" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_24_396">
+                                                                <rect width="35" height="35" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Manage Users
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <svg width="20" height="20" viewBox="0 0 35 35" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_24_396)">
+                                                            <path
+                                                                d="M34.6578 3.37771C34.877 3.59749 35 3.89516 35 4.20549C35 4.51582 34.877 4.8135 34.6578 5.03328L32.2117 7.48145L27.5211 2.79146L29.9672 0.343291C30.1871 0.123482 30.4854 0 30.7963 0C31.1072 0 31.4055 0.123482 31.6254 0.343291L34.6578 3.37537V3.37771ZM30.5536 9.13701L25.863 4.44703L9.88449 20.4258C9.75541 20.5548 9.65824 20.7122 9.60071 20.8854L7.71274 26.5462C7.67851 26.6494 7.67364 26.7601 7.6987 26.8659C7.72376 26.9717 7.77776 27.0685 7.85465 27.1454C7.93155 27.2222 8.02831 27.2762 8.13413 27.3013C8.23994 27.3263 8.35064 27.3215 8.45386 27.2873L14.1154 25.3995C14.2884 25.3427 14.4458 25.2464 14.5751 25.1181L30.5536 9.13701Z"
+                                                                fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.853653 30.5793C0.853653 31.5253 1.22947 32.4326 1.89842 33.1016C2.56738 33.7705 3.47468 34.1463 4.42073 34.1463H30.5793C31.5253 34.1463 32.4326 33.7705 33.1016 33.1016C33.7705 32.4326 34.1463 31.5253 34.1463 30.5793V16.311C34.1463 15.9956 34.0211 15.6932 33.7981 15.4702C33.5751 15.2472 33.2727 15.122 32.9573 15.122C32.642 15.122 32.3395 15.2472 32.1165 15.4702C31.8936 15.6932 31.7683 15.9956 31.7683 16.311V30.5793C31.7683 30.8946 31.643 31.1971 31.42 31.42C31.197 31.643 30.8946 31.7683 30.5793 31.7683H4.42073C4.10538 31.7683 3.80294 31.643 3.57996 31.42C3.35697 31.1971 3.2317 30.8946 3.2317 30.5793V4.42073C3.2317 4.10538 3.35697 3.80295 3.57996 3.57997C3.80294 3.35698 4.10538 3.23171 4.42073 3.23171H19.878C20.1934 3.23171 20.4958 3.10644 20.7188 2.88345C20.9418 2.66047 21.0671 2.35803 21.0671 2.04268C21.0671 1.72734 20.9418 1.4249 20.7188 1.20192C20.4958 0.978932 20.1934 0.853661 19.878 0.853661H4.42073C3.47468 0.853661 2.56738 1.22948 1.89842 1.89843C1.22947 2.56739 0.853653 3.47469 0.853653 4.42073V30.5793Z"
+                                                                fill="black" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_24_396">
+                                                                <rect width="35" height="35" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Activity Logging
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <svg width="20" height="20" viewBox="0 0 35 35" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_24_396)">
+                                                            <path
+                                                                d="M34.6578 3.37771C34.877 3.59749 35 3.89516 35 4.20549C35 4.51582 34.877 4.8135 34.6578 5.03328L32.2117 7.48145L27.5211 2.79146L29.9672 0.343291C30.1871 0.123482 30.4854 0 30.7963 0C31.1072 0 31.4055 0.123482 31.6254 0.343291L34.6578 3.37537V3.37771ZM30.5536 9.13701L25.863 4.44703L9.88449 20.4258C9.75541 20.5548 9.65824 20.7122 9.60071 20.8854L7.71274 26.5462C7.67851 26.6494 7.67364 26.7601 7.6987 26.8659C7.72376 26.9717 7.77776 27.0685 7.85465 27.1454C7.93155 27.2222 8.02831 27.2762 8.13413 27.3013C8.23994 27.3263 8.35064 27.3215 8.45386 27.2873L14.1154 25.3995C14.2884 25.3427 14.4458 25.2464 14.5751 25.1181L30.5536 9.13701Z"
+                                                                fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.853653 30.5793C0.853653 31.5253 1.22947 32.4326 1.89842 33.1016C2.56738 33.7705 3.47468 34.1463 4.42073 34.1463H30.5793C31.5253 34.1463 32.4326 33.7705 33.1016 33.1016C33.7705 32.4326 34.1463 31.5253 34.1463 30.5793V16.311C34.1463 15.9956 34.0211 15.6932 33.7981 15.4702C33.5751 15.2472 33.2727 15.122 32.9573 15.122C32.642 15.122 32.3395 15.2472 32.1165 15.4702C31.8936 15.6932 31.7683 15.9956 31.7683 16.311V30.5793C31.7683 30.8946 31.643 31.1971 31.42 31.42C31.197 31.643 30.8946 31.7683 30.5793 31.7683H4.42073C4.10538 31.7683 3.80294 31.643 3.57996 31.42C3.35697 31.1971 3.2317 30.8946 3.2317 30.5793V4.42073C3.2317 4.10538 3.35697 3.80295 3.57996 3.57997C3.80294 3.35698 4.10538 3.23171 4.42073 3.23171H19.878C20.1934 3.23171 20.4958 3.10644 20.7188 2.88345C20.9418 2.66047 21.0671 2.35803 21.0671 2.04268C21.0671 1.72734 20.9418 1.4249 20.7188 1.20192C20.4958 0.978932 20.1934 0.853661 19.878 0.853661H4.42073C3.47468 0.853661 2.56738 1.22948 1.89842 1.89843C1.22947 2.56739 0.853653 3.47469 0.853653 4.42073V30.5793Z"
+                                                                fill="black" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_24_396">
+                                                                <rect width="35" height="35" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Deleted Data
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <svg width="20" height="20" viewBox="0 0 35 35" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_24_396)">
+                                                            <path
+                                                                d="M34.6578 3.37771C34.877 3.59749 35 3.89516 35 4.20549C35 4.51582 34.877 4.8135 34.6578 5.03328L32.2117 7.48145L27.5211 2.79146L29.9672 0.343291C30.1871 0.123482 30.4854 0 30.7963 0C31.1072 0 31.4055 0.123482 31.6254 0.343291L34.6578 3.37537V3.37771ZM30.5536 9.13701L25.863 4.44703L9.88449 20.4258C9.75541 20.5548 9.65824 20.7122 9.60071 20.8854L7.71274 26.5462C7.67851 26.6494 7.67364 26.7601 7.6987 26.8659C7.72376 26.9717 7.77776 27.0685 7.85465 27.1454C7.93155 27.2222 8.02831 27.2762 8.13413 27.3013C8.23994 27.3263 8.35064 27.3215 8.45386 27.2873L14.1154 25.3995C14.2884 25.3427 14.4458 25.2464 14.5751 25.1181L30.5536 9.13701Z"
+                                                                fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.853653 30.5793C0.853653 31.5253 1.22947 32.4326 1.89842 33.1016C2.56738 33.7705 3.47468 34.1463 4.42073 34.1463H30.5793C31.5253 34.1463 32.4326 33.7705 33.1016 33.1016C33.7705 32.4326 34.1463 31.5253 34.1463 30.5793V16.311C34.1463 15.9956 34.0211 15.6932 33.7981 15.4702C33.5751 15.2472 33.2727 15.122 32.9573 15.122C32.642 15.122 32.3395 15.2472 32.1165 15.4702C31.8936 15.6932 31.7683 15.9956 31.7683 16.311V30.5793C31.7683 30.8946 31.643 31.1971 31.42 31.42C31.197 31.643 30.8946 31.7683 30.5793 31.7683H4.42073C4.10538 31.7683 3.80294 31.643 3.57996 31.42C3.35697 31.1971 3.2317 30.8946 3.2317 30.5793V4.42073C3.2317 4.10538 3.35697 3.80295 3.57996 3.57997C3.80294 3.35698 4.10538 3.23171 4.42073 3.23171H19.878C20.1934 3.23171 20.4958 3.10644 20.7188 2.88345C20.9418 2.66047 21.0671 2.35803 21.0671 2.04268C21.0671 1.72734 20.9418 1.4249 20.7188 1.20192C20.4958 0.978932 20.1934 0.853661 19.878 0.853661H4.42073C3.47468 0.853661 2.56738 1.22948 1.89842 1.89843C1.22947 2.56739 0.853653 3.47469 0.853653 4.42073V30.5793Z"
+                                                                fill="black" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_24_396">
+                                                                <rect width="35" height="35" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="defaultCheck1">
+                                                    <label class="form-check-label" for="defaultCheck1">
+                                                        Settings
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <svg width="20" height="20" viewBox="0 0 35 35" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_24_396)">
+                                                            <path
+                                                                d="M34.6578 3.37771C34.877 3.59749 35 3.89516 35 4.20549C35 4.51582 34.877 4.8135 34.6578 5.03328L32.2117 7.48145L27.5211 2.79146L29.9672 0.343291C30.1871 0.123482 30.4854 0 30.7963 0C31.1072 0 31.4055 0.123482 31.6254 0.343291L34.6578 3.37537V3.37771ZM30.5536 9.13701L25.863 4.44703L9.88449 20.4258C9.75541 20.5548 9.65824 20.7122 9.60071 20.8854L7.71274 26.5462C7.67851 26.6494 7.67364 26.7601 7.6987 26.8659C7.72376 26.9717 7.77776 27.0685 7.85465 27.1454C7.93155 27.2222 8.02831 27.2762 8.13413 27.3013C8.23994 27.3263 8.35064 27.3215 8.45386 27.2873L14.1154 25.3995C14.2884 25.3427 14.4458 25.2464 14.5751 25.1181L30.5536 9.13701Z"
+                                                                fill="black" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M0.853653 30.5793C0.853653 31.5253 1.22947 32.4326 1.89842 33.1016C2.56738 33.7705 3.47468 34.1463 4.42073 34.1463H30.5793C31.5253 34.1463 32.4326 33.7705 33.1016 33.1016C33.7705 32.4326 34.1463 31.5253 34.1463 30.5793V16.311C34.1463 15.9956 34.0211 15.6932 33.7981 15.4702C33.5751 15.2472 33.2727 15.122 32.9573 15.122C32.642 15.122 32.3395 15.2472 32.1165 15.4702C31.8936 15.6932 31.7683 15.9956 31.7683 16.311V30.5793C31.7683 30.8946 31.643 31.1971 31.42 31.42C31.197 31.643 30.8946 31.7683 30.5793 31.7683H4.42073C4.10538 31.7683 3.80294 31.643 3.57996 31.42C3.35697 31.1971 3.2317 30.8946 3.2317 30.5793V4.42073C3.2317 4.10538 3.35697 3.80295 3.57996 3.57997C3.80294 3.35698 4.10538 3.23171 4.42073 3.23171H19.878C20.1934 3.23171 20.4958 3.10644 20.7188 2.88345C20.9418 2.66047 21.0671 2.35803 21.0671 2.04268C21.0671 1.72734 20.9418 1.4249 20.7188 1.20192C20.4958 0.978932 20.1934 0.853661 19.878 0.853661H4.42073C3.47468 0.853661 2.56738 1.22948 1.89842 1.89843C1.22947 2.56739 0.853653 3.47469 0.853653 4.42073V30.5793Z"
+                                                                fill="black" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_24_396">
+                                                                <rect width="35" height="35" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
