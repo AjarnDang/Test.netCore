@@ -1,9 +1,251 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
     ViewData["Nav"] = "nav-dashboard";
 }
 
-<div class="text-start">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col-md-4 col-sm-12 mb-4">
+        <div class="card border-0">
+            <div class="card-body px-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="total">
+                        <h2>80</h2>
+                        <p>Total Users</p>
+                    </div>
+                    <div><img src="~/images/image.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12 mb-4">
+        <div class="card border-0">
+            <div class="card-body px-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="total">
+                        <h2>4</h2>
+                        <p>Total Roles</p>
+                    </div>
+                    <div class=""><img src="~/images/image3.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12 mb-4">
+        <div class="card border-0">
+            <div class="card-body px-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="total">
+                        <h2>80</h2>
+                        <p>Activities</p>
+                    </div>
+                    <div class=""><img src="~/images/image2.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 p-4 mb-4">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-auto h3 align-item-center page-title">
+            Recent Users
+        </div>
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-auto d-flex justify-content-end align-item-center">
+            <a asp-controller="ManageUser" asp-action="Index" class="btn-primary">
+                See full page
+            </a>
+        </div>
+    </div>
+
+    <hr class="content-hr-divider">
+    <div class="table-responsive">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Username</td>
+                    <td>Role (s)</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Carter</td>
+                    <td>johncarter888</td>
+                    <td><button class="role-card role-superadmin">Super Admin</button></td>
+                    <td>john.c@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Scott</td>
+                    <td>Lang</td>
+                    <td>sclng123</td>
+                    <td><button class="role-card role-superadmin">Super Admin</button></td>
+                    <td>scott.l@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Tony</td>
+                    <td>Stark</td>
+                    <td>ironmanboi</td>
+                    <td>
+                        <button class="role-card role-admin">Admin</button>
+                        <button class="role-card role-operator">Operator</button>
+                    </td>
+                    <td>tony.s@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Steve</td>
+                    <td>Rogers</td>
+                    <td>capt999</td>
+                    <td>
+                        <button class="role-card role-admin">Admin</button>
+                        <button class="role-card role-operator">Operator</button>
+                    </td>
+                    <td>steve.r@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Nick</td>
+                    <td>Fury</td>
+                    <td>madman54</td>
+                    <td>
+                        <button class="role-card role-admin">Admin</button>
+                        <button class="role-card role-editor">Editor</button>
+                    </td>
+                    <td>nick.f@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Shang</td>
+                    <td>Chi</td>
+                    <td>tenring2</td>
+                    <td>
+                        <button class="role-card role-editor">Editor</button>
+                    </td>
+                    <td>shang.s@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-7 col-sm-12">
+        <div class="card border-0 p-4 mb-4">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-auto h3 align-item-center page-title">
+                    Recent Activity Logging
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12 col-xs-auto d-flex justify-content-end align-item-center">
+                    <a asp-controller="ActivityLogging" asp-action="Index" class="btn-primary">
+                        See full page
+                    </a>
+                </div>
+            </div>
+
+            <hr class="content-hr-divider">
+
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Username</td>
+                            <td>Role (s)</td>
+                            <td>Activity</td>
+                            <td>Date / Time</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>johncarter888</td>
+                            <td><button class="role-card role-superadmin">Super Admin</button></td>
+                            <td>Edit</td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>johncarter888</td>
+                            <td><button class="role-card role-superadmin">Super Admin</button></td>
+                            <td>Edit</td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>johncarter888</td>
+                            <td><button class="role-card role-superadmin">Super Admin</button></td>
+                            <td>Edit</td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>johncarter888</td>
+                            <td><button class="role-card role-superadmin">Super Admin</button></td>
+                            <td>Edit</td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-12">
+        <div class="card border-0 p-4 mb-4">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-auto h3 align-item-center page-title">
+                    Recent Role (s)
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12 col-xs-auto d-flex justify-content-end align-item-center">
+                    <a asp-controller="ManageRole" asp-action="Index" class="btn-primary">
+                        See full page
+                    </a>
+                </div>
+            </div>
+
+            <hr class="content-hr-divider">
+
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <td>#</td>
+                            <td>Role (s)</td>
+                            <td>Date Create</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><button class="role-card role-superadmin">Super Admin</button></td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><button class="role-card role-admin">Admin</button></td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><button class="role-card role-operator">Operator</button></td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><button class="role-card role-editor">Editor</button></td>
+                            <td>8-11-2023 00:00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

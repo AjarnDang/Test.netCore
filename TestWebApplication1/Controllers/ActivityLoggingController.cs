@@ -8,5 +8,9 @@ namespace TestWebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult ViewDetail()
+        {
+            return View();
+        }
     }
 }

@@ -2,13 +2,13 @@
 For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Manage Users";
+    ViewData["Title"] = "Manage Role";
     ViewData["Nav"] = "nav-manage-role";
 }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a sp-controller="Home" asp-action="Index">Dashboard</a>
+            <a sp-controller="Home" asp-action="EditRole">Dashboard</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
             @ViewData["Title"]
@@ -116,7 +116,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>8-11-2023 00:00:00</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="edit-data">
+                        <a asp-controller="ManageRole" asp-action="EditRole" class="edit-data">
                             <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_24_396)">
                                     <path
@@ -150,7 +150,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>8-11-2023 00:00:00</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="edit-data">
+                        <a asp-controller="ManageRole" asp-action="EditRole" class="edit-data">
                             <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_24_396)">
                                     <path
@@ -185,7 +185,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                 <td>8-11-2023 00:00:00</td>
                 <td>8-11-2023 00:00:00</td>
                 <td>
-                    <a href="" class="edit-data">
+                    <a asp-controller="ManageRole" asp-action="EditRole" class="edit-data">
                         <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_24_396)">
                                 <path
@@ -213,13 +213,13 @@ For more information on enabling MVC for empty projects, visit https://go.micros
             </tr>
             <tr>
                 <td>4</td>
-                <td><button class="role-card role-superadmin">Editor</button></td>
+                <td><button class="role-card role-editor">Editor</button></td>
                 <td>Lorem Ipsum is simply dummy text of the printing</td>
                 <td>johncarter888</td>
                 <td>8-11-2023 00:00:00</td>
                 <td>8-11-2023 00:00:00</td>
                 <td>
-                    <a href="" class="edit-data">
+                    <a asp-controller="ManageRole" asp-action="EditRole" class="edit-data">
                         <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_24_396)">
                                 <path
@@ -258,14 +258,9 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     data-bs-toggle="dropdown" aria-expanded="false">
                     10
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">10</a></li>
+                    <li><a class="dropdown-item" href="#">100</a></li>
                 </ul>
             </div>
             rows per page

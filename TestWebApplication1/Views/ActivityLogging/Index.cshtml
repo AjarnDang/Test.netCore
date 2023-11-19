@@ -43,6 +43,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                         </form>
                     </div>
                 </div>
+                
                 <div class="col-auto">
                     <button class="btn-primary mx-1">
                         <svg viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +86,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -116,7 +117,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -147,7 +148,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -178,7 +179,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -209,7 +210,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -240,7 +241,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     <td>Username</td>
                     <td>8-11-2023 00:00:00</td>
                     <td>
-                        <a href="" class="view-data">
+                        <a asp-controller="ActivityLogging" asp-action="ViewDetail" class="view-data">
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_9_1338)">
                                     <path
@@ -277,14 +278,9 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     data-bs-toggle="dropdown" aria-expanded="false">
                     10
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item active" href="#">10</a></li>
+                    <li><a class="dropdown-item" href="#">100</a></li>
                 </ul>
             </div>
             rows per page

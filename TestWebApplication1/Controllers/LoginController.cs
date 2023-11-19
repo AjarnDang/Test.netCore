@@ -2,13 +2,9 @@
 
 namespace TestWebApplication1.Controllers
 {
-    public class ManageRoleController : Controller
+    public class LoginController : Controller
     {
         public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult EditRole()
         {
             return View();
         }
