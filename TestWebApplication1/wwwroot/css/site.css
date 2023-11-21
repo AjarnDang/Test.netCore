@@ -156,6 +156,16 @@ span.comp {
   border: none;
 }
 
+button.close {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+button.close span {
+  font-size: 18px;
+}
+
 .nav-pills .nav-link.active svg {
   margin-right: 10px;
 }
