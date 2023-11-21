@@ -1,43 +1,76 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Log in";
+  ViewData["Title"] = "Log in";
+  Layout = null;
 }
-<link rel="stylesheet" href="~/css/login.css" />
+<!DOCTYPE html>
+<html lang="en">
 
-<body className="signin-body">
-    <div className='container'>
-      <div className='signin-form align-items-center justify-content-center'>
-        <div className="bg-white rounded">
-          <form onSubmit={handleSubmit}>
-            <div className="text-center align-center">
-              <img src={spaLogo} alt="The SuperAppIOT Logo" width={270} />
-              <h4 className="mb-4 mt-3">Login</h4>
-            </div>
-            <div className="form-group">
-              <input className="form-control" type="text" name="username" placeholder="Username" />
-              
-            </div>
-            <div className="form-group mt-3">
-              <input className="form-control" type="password" name="password" placeholder="Password" />
-             
-            </div>
-            <div className="form-group mt-2">
-              <label className="form-check-label">
-                <input type="checkbox" className="form-check-input" />
-                &nbsp; Remember me
-              </label>
-            </div>
-            <div className="justify-content-center text-center w-100 mt-5">
-              <input className="btn btn-primary px-4" type="submit" value="Login" />
-              
-            </div>
-          </form>
-        </div>
-      </div> 
-      <div id="copy-right">
-      © Copyright Metro Systems Corporation Plc {CurrYear}. 
-    </div>  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - System Admin</title>
+  <link rel="icon" type="image/x-icon" href="~/images/logo.jpg" width="100%">
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+  @* Custom *@
+  <link rel="stylesheet" href="~/TestWebApplication1.styles.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/login.css" />
+</head>
+
+
+<body>
+  <div class="limiter">
+    <div class="container-login100" style="background-image: url('@Url.Content("~/Images/bg-login.png")')">
+      <div class="wrap-login100">
+        <form class="login100-form validate-form">
+          <h1 class="text-center">
+            <span style="color: #EA6B03; font-size: 40px; font-family: 'Poppins-SemiBold'">ZENITH</span>
+            <span style="color: #2D4E9E; font-size: 40px; font-family: 'Poppins-SemiBold'">COMP</span>
+          </h1>
+
+          <span class="login100-form-title mt-2 mb-5">
+            Welcome back!
+          </span>
+
+          <div class="wrap-input100 mb-3" data-validate="Enter username">
+            <label for="">Username</label>
+            <input class="form-control" type="text" name="username" placeholder="Username">
+          </div>
+
+          <div class="wrap-input100 mb-2" data-validate="Enter password">
+            <label for="">Password</label>
+            <input class="form-control" type="password" name="pass" placeholder="Password">
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <a href="">Forget Password</a>
+          </div>
+
+          <div class="d-flex justify-content-center text-center mt-3 mb-5">
+            <button class="btn btn-primary">
+              Log in
+            </button>
+          </div>
+
+          @* <div class="text-center p-t-90">
+            <a class="txt1" href="#">
+              Forgot Password?
+            </a>
+          </div> *@
+        </form>
+      </div>
     </div>
+  </div>
 </body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@* Custom JS *@
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+</html>

@@ -170,12 +170,12 @@ button.close span {
   margin-right: 10px;
 }
 
-.nav-pills .nav-link, 
+.nav-pills .nav-link,
 .nav-pills .show>.nav-link {
   color: #000;
 }
 
-.nav-pills .nav-link.active, 
+.nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   background-color: #EA6B03;
 }
@@ -212,7 +212,9 @@ label {
   font-size: 32px;
 }
 
-.page-title, th, thead {
+.page-title,
+th,
+thead {
   font-family: 'Poppins-SemiBold';
 }
 
@@ -220,8 +222,8 @@ label {
   border: none;
   border-radius: 30px;
   padding: 8px 10px;
-  font-weight:lighter;
-  pointer-events: none; 
+  font-weight: lighter;
+  pointer-events: none;
 }
 
 .role-superadmin {
@@ -248,7 +250,7 @@ label {
 .view-data svg,
 .restore-data svg,
 .edit-data svg {
-margin-right: 13px;
+  margin-right: 13px;
 }
 
 .view-data svg,
@@ -269,20 +271,25 @@ margin-right: 13px;
 a,
 a:hover,
 a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 label {
   margin-bottom: 5px;
 }
 
-.navbar {
+.topbar {
   background-color: white;
   padding: 24px 29px;
   border: none;
   border-radius: 0;
+  position: fixed;
+  /* top: 0;
+  right: 0;
+  left: 310px; */
+  z-index: 1030;
   /* margin-bottom: 40px; */
   /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
@@ -300,7 +307,7 @@ label {
   margin: 40px 0;
 }
 
-.navbar .dropdown {
+.topbar .dropdown {
   float: right !important;
 }
 
@@ -322,6 +329,7 @@ label {
   transition: all 0.3s;
   padding: 20px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+
 }
 
 #sidebar.active {
@@ -353,7 +361,7 @@ label {
 
 #sidebar ul li.active {
   color: #fff;
-  background: #EA6B03; 
+  background: #EA6B03;
   border-radius: 6px;
 }
 
@@ -431,9 +439,7 @@ a.article:hover {
 ----------------------------------------------------- */
 
 /* Nest Hub*/
-@media (max-width: 1199px) {
-   
-}
+@media (max-width: 1199px) {}
 
 
 /* Surface Pro 7*/
@@ -449,51 +455,43 @@ a.article:hover {
   #sidebar {
     margin-left: -310px;
   }
+
   #sidebar.active {
-      margin-left: 0;
+    margin-left: 0;
   }
+
   #sidebarCollapse span {
-      display: none;
+    display: none;
+  }
+  .topbar {
+    left: 0;
   }
 }
 
 
 /* Samsung Galaxy S8+  Horizontal*/
 
-@media (max-width: 767px) {
-    
-}
+@media (max-width: 767px) {}
 
 
 /* Surface Duo*/
-@media (max-width: 569px) {
-
-}
+@media (max-width: 569px) {}
 
 
 /*iPhone XR*/
-@media (max-width: 481px) {
-   
-}
+@media (max-width: 481px) {}
 
 
 /*Galaxy S20 Ultra*/
-@media (max-width: 414px) {
-   
-}
+@media (max-width: 414px) {}
 
 
 /*iPhone SE*/
-@media (max-width: 376px) {
-  
-    
-}
+@media (max-width: 376px) {}
 
 
 /* Galaxy Fold*/
-@media (max-width: 321px) {
-   
-}
+@media (max-width: 321px) {}
 
 
 
@@ -543,7 +541,8 @@ a.article:hover {
   font-size: 18px;
 }
 
-.s006 form .inner-form .input-field input:hover, .s006 form .inner-form .input-field input:focus {
+.s006 form .inner-form .input-field input:hover,
+.s006 form .inner-form .input-field input:focus {
   box-shadow: none;
   outline: 0;
 }
@@ -553,7 +552,7 @@ a.article:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   position: absolute;
   left: 0;
   height: 100%;
@@ -563,7 +562,7 @@ a.article:hover {
   cursor: pointer;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -574,12 +573,14 @@ a.article:hover {
   transition: all .2s ease-out, color .2s ease-out;
 }
 
-.s006 form .inner-form .input-field .btn-search:hover, .s006 form .inner-form .input-field .btn-search:focus {
+.s006 form .inner-form .input-field .btn-search:hover,
+.s006 form .inner-form .input-field .btn-search:focus {
   outline: 0;
   box-shadow: none;
 }
 
-.s006 form .inner-form .input-field .btn-search:hover svg, .s006 form .inner-form .input-field .btn-search:focus svg {
+.s006 form .inner-form .input-field .btn-search:hover svg,
+.s006 form .inner-form .input-field .btn-search:focus svg {
   fill: #666;
 }
 
@@ -589,10 +590,12 @@ a.article:hover {
     /* margin-bottom: 20px; */
     height: 50px;
   }
+
   .s006 form .inner-form .input-field input {
     padding-left: 55px;
     font-size: 16px;
   }
+
   .s006 form .inner-form .input-field .btn-search svg {
     width: 26px;
     height: 26px;
